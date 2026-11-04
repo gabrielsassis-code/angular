@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 interface User {
   nome: string;
@@ -8,7 +9,7 @@ interface User {
 
 @Component({
   selector: 'app-adicionar-usuario',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './adicionar-usuario.html',
   styleUrl: './adicionar-usuario.css',
 })

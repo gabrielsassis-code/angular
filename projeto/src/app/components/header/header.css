@@ -1,0 +1,39 @@
+header {
+  position: relative;
+  overflow: hidden;
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  padding: 26px clamp(24px, 7vw, 96px);
+  color: #fff;
+  background: linear-gradient(120deg, var(--senai-red-dark) 0%, var(--senai-red) 72%, #e01b3b 100%);
+  box-shadow: 0 5px 18px rgba(31, 41, 51, 0.18);
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  right: -60px;
+  top: -110px;
+  width: 330px;
+  height: 330px;
+  border: 28px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+h1 {
+  position: relative;
+  margin: 0;
+  max-width: 900px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 600px) {
+  header {
+    min-height: 88px;
+    padding: 20px 24px;
+  }
+}
