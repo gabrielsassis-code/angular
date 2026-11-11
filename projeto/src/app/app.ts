@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
-import { AdicionarUsuario } from './pages/adicionar-usuario/adicionar-usuario';
+
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Footer, AdicionarUsuario],
+  imports: [Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
