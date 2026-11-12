@@ -9,3 +9,19 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
 }
+
+main {
+  width: min(100% - 40px, 1080px);
+  margin: 0 auto;
+  padding: clamp(32px, 7vw, 76px) 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: min(100% - 28px, 1080px);
+    padding: 28px 0 40px;
+  }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 interface Usuario{
   nome: string;
@@ -7,7 +8,7 @@ interface Usuario{
 
 @Component({
   selector: 'app-usuarios',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './usuarios.html',
   styleUrl: './usuarios.css',
 })

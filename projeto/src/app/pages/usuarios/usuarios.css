@@ -1,0 +1,114 @@
+.section {
+  width: min(100%, 720px);
+  padding: clamp(24px, 5vw, 48px);
+  background:
+    linear-gradient(135deg, rgba(229, 9, 32, 0.08), transparent 42%),
+    var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-red);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+}
+
+h2,
+h3 {
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0 0 28px;
+  font-size: clamp(2.3rem, 6vw, 4rem);
+  letter-spacing: 0.025em;
+}
+
+h3 {
+  margin: 38px 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1.7rem;
+  letter-spacing: 0.06em;
+}
+
+.form-group {
+  display: grid;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+label {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+input {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  color: var(--color-white);
+  background: #0b0b0b;
+  border: 1px solid #393939;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input:focus {
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 3px rgba(229, 9, 32, 0.16);
+}
+
+button {
+  min-height: 48px;
+  padding: 12px 24px;
+  color: var(--color-white);
+  background: var(--color-red);
+  border: 1px solid var(--color-red);
+  border-radius: 0;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+  background: var(--color-red-dark);
+  transform: translateY(-1px);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 14px 16px;
+  color: var(--color-muted);
+  background: var(--color-surface-raised);
+  border-left: 2px solid var(--color-red);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 24px 18px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

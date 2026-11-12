@@ -1,39 +1,85 @@
 header {
   position: relative;
   overflow: hidden;
-  min-height: 112px;
+  min-height: 120px;
   display: flex;
+  justify-content: space-between;
+  gap: 28px;
   align-items: center;
-  padding: 26px clamp(24px, 7vw, 96px);
-  color: #fff;
-  background: linear-gradient(120deg, var(--senai-red-dark) 0%, var(--senai-red) 72%, #e01b3b 100%);
-  box-shadow: 0 5px 18px rgba(31, 41, 51, 0.18);
+  padding: 22px clamp(24px, 7vw, 96px);
+  color: var(--color-white);
+  background:
+    linear-gradient(105deg, rgba(229, 9, 32, 0.16), transparent 45%),
+    #080808;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.38);
 }
 
 header::before {
   content: '';
   position: absolute;
-  right: -60px;
-  top: -110px;
-  width: 330px;
-  height: 330px;
-  border: 28px solid rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
+  inset: auto 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-red), transparent);
+  opacity: 0.8;
 }
 
 h1 {
   position: relative;
   margin: 0;
-  max-width: 900px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: clamp(1.55rem, 3vw, 2.5rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  max-width: 600px;
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  padding: 10px 15px;
+  color: var(--color-muted);
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--color-white);
+  border-color: var(--color-red);
+  background: rgba(229, 9, 32, 0.12);
 }
 
 @media (max-width: 600px) {
   header {
-    min-height: 88px;
-    padding: 20px 24px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 20px 18px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav a {
+    padding: 8px 12px;
+  }
+
+  nav a:first-child {
+    padding-left: 0;
   }
 }

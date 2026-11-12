@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --senai-red: #c8102e;
-  --senai-red-dark: #a30d25;
-  --senai-blue: #003b5c;
-  --senai-gray: #f2f4f7;
-  --senai-dark: #1f2933;
+  --color-black: #090909;
+  --color-surface: #111;
+  --color-surface-raised: #181818;
+  --color-border: #303030;
+  --color-white: #f5f5f5;
+  --color-muted: #a4a4a4;
+  --color-red: #e50920;
+  --color-red-dark: #a90014;
 }
 
 * {
@@ -19,14 +22,21 @@ body {
 
 body {
   margin: 0;
-  color: var(--senai-dark);
-  font-family: 'Roboto', Arial, sans-serif;
+  color: var(--color-white);
+  font-family: 'Inter', Arial, sans-serif;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.92), rgba(242, 244, 247, 0.96)),
-    repeating-linear-gradient(135deg, #e8ebef 0 2px, transparent 2px 18px);
+    radial-gradient(ellipse at 85% 4%, rgba(229, 9, 32, 0.12), transparent 32rem),
+    repeating-linear-gradient(135deg, #101010 0 1px, transparent 1px 14px),
+    var(--color-black);
 }
 
 button,
-input {
+input,
+a {
   font: inherit;
+}
+
+::selection {
+  color: var(--color-white);
+  background: var(--color-red);
 }

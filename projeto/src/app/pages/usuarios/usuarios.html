@@ -1,8 +1,8 @@
 <section class="section">
-    h2>adicionar Usuários</h2>
+    <h2>adicionar Usuários</h2>
 
     <form #formUsuario="ngForm" (ngSubmit)="adicionarUsuario()">
-        <div #formUsuario="ngForm" class="form-group" ngSubmit="adicionarUsuario()">
+        <div class="form-group">
             <label for="nome">Nome:</label>
             <input type="text"
              id="nome"
@@ -24,8 +24,8 @@
 
     <h3>Lista de Usuários</h3>
     <ul>
-        @For(let usuario of usuarios; track $index)
+        @for (usuario of usuarios; track $index) {
             <li>{{usuario.nome}} - {{usuario.email}}</li>
-
+        }
     </ul>
 </section>
